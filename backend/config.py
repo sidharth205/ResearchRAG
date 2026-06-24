@@ -6,8 +6,13 @@ class Settings(BaseSettings):
     APP_NAME: str = "ResearchForge"
     DEBUG: bool = True
 
-    # Database (we'll fill in real values in Phase 1.4)
-    DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5432/researchforge"
+    # Database
+    DATABASE_URL: str
+
+    # Storage
+    SUPABASE_URL: str
+    SUPABASE_SERVICE_KEY: str
+    SUPABASE_BUCKET: str = "papers"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 

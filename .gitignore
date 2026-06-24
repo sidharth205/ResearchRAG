@@ -27,3 +27,6 @@ Thumbs.db
 
 # Chroma
 chroma_db/
+
+# Alembic
+*.pyc
